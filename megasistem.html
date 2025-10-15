@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mega Sistem</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @font-face {
+        font-family: "Bebas-Regular";
+        src: url("/Bebas-Regular.ttf") format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      body {
+        background: #050c73;
+        margin: 0;
+        font-family: "Montserrat", sans-serif;
+        color: white;
+        overflow-x: hidden;
+      }
+
+      #blobs-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 150vh;
+        z-index: 0;
+        pointer-events: none;
+        overflow: hidden;
+      }
+
+      .blob {
+        position: absolute;
+        border-radius: 50%;
+        background-color: #cc701a;
+        filter: blur(60px);
+        opacity: 0.3;
+      }
+
+      #blob1 {
+        width: 200px;
+        height: 200px;
+        left: 10%;
+        animation: floatUp 19s linear infinite;
+      }
+      #blob2 {
+        width: 180px;
+        height: 180px;
+        left: 35%;
+        animation: floatDown 30s linear infinite;
+      }
+      #blob3 {
+        width: 220px;
+        height: 220px;
+        left: 70%;
+        animation: floatUp 20s linear infinite;
+      }
+      #blob4 {
+        width: 160px;
+        height: 160px;
+        left: 20%;
+        animation: floatDown 29s linear infinite;
+      }
+      #blob5 {
+        width: 180px;
+        height: 180px;
+        left: 50%;
+        animation: floatUp 17s linear infinite;
+      }
+      #blob6 {
+        width: 200px;
+        height: 200px;
+        left: 80%;
+        animation: floatDown 22s linear infinite;
+      }
+
+      @keyframes floatUp {
+        0% {
+          top: 100vh;
+          opacity: 0;
+        }
+        10%,
+        90% {
+          opacity: 0.4;
+        }
+        100% {
+          top: -250px;
+          opacity: 0;
+        }
+      }
+
+      @keyframes floatDown {
+        0% {
+          top: -250px;
+          opacity: 0;
+        }
+        10%,
+        90% {
+          opacity: 0.4;
+        }
+        100% {
+          top: 100vh;
+          opacity: 0;
+        }
+      }
+      #cabeçalho {
+        display: flex;
+        position: fixed;
+        z-index: 999;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 20px;
+        height: 60px;
+        width: 95%;
+        background: #ffffff34;
+        border-bottom: 5px solid rgba(255, 0, 0, 0.548);
+        border-radius: 64px;
+        margin-left: 15px;
+        margin-top: 15px;
+        backdrop-filter: blur(10px);
+      }
+
+      #LogoHeader {
+        width: 50px;
+        height: auto;
+        border-radius: 16px;
+      }
+
+      .header-left {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .header-right {
+        display: flex;
+        gap: 15px;
+      }
+
+      .headerbutton {
+        background-color: rgba(255, 255, 255, 0.271);
+        border: 2px solid white;
+        border-radius: 32px;
+        color: rgb(255, 255, 255);
+        padding: 8px 12px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .headerbutton:hover {
+        background-color: white;
+        color: #1b0573;
+      }
+
+      #conteudo {
+        display: flex;
+      }
+
+      #WayChef {
+        position: relative;
+        top: 130px;
+        left: 100px;
+        width: 500px;
+        height: auto;
+        filter: brightness(40%);
+        filter: saturate(120%);
+        filter: contrast(150%);
+      }
+
+      #primeirotitulo {
+        position: absolute;
+        display: flex;
+        height: 50px;
+        width: auto;
+        left: 600px;
+        top: 150px;
+        font-family: "Bebas-Regular", sans-serif;
+        font-size: 45px;
+        max-lines: 2;
+      }
+
+      #primeiroparagrafo {
+        position: absolute;
+        left: 600px;
+        top: 300px;
+        margin: 0%;
+        padding: 0%;
+        font-size: 120%;
+      }
+      #segundoparagrafo {
+        position: absolute;
+        left: 600px;
+        top: 400px;
+        margin: 0%;
+        padding: 0%;
+        font-size: 120%;
+      }
+
+      #ProductsButtonPage {
+        background-color: rgba(255, 255, 255, 0.271);
+        border: 2px solid white;
+        border-radius: 32px;
+        color: rgb(255, 255, 255);
+        padding: 8px 12px;
+        cursor: pointer;
+        transition: 0.3s;
+        height: 60px;
+        width: 120px;
+        position: absolute;
+        top: 390px;
+        left: 1120px;
+      }
+
+      #ProductsButtonPage:hover {
+        background-color: white;
+        color: #1b0573;
+      }
+
+      #segundotitulo {
+        position: absolute;
+        left: 550px;
+        top: 750px;
+        font-family: "Bebas-Regular", sans-serif;
+        font-size: 300%;
+      }
+
+      #bobinado {
+        position: absolute;
+        top: 900px;
+        left: 100px;
+      }
+
+      #WayChefFrontal {
+        position: absolute;
+        top: 900px;
+        left: 600px;
+      }
+
+      #terminaldeauto {
+        position: absolute;
+        top: 830px;
+        left: 900px;
+        height: 65%;
+        width: auto;
+      }
+
+      #BobinaTitulo {
+        position: absolute;
+        top: 1250px;
+        left:200px;
+        text-align: center;
+       }
+
+      #WayChefTitulo {
+        position: absolute;
+        top: 1250px;
+        left: 615px;
+        text-align: center;
+       }
+
+      #AutoatendimentoTitulo {
+        position: absolute;
+        top: 1250px;
+        left: 1000px;
+        text-align: center;
+      }
+
+      .ProdutcContact {
+        background-color: rgba(255, 255, 255, 0.271);
+        border: 2px solid white;
+        border-radius: 32px;
+        color: rgb(255, 255, 255);
+        padding: 8px 12px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      
+      .ProdutcContact:hover {
+        background-color: white;
+        color: #1b0573;
+      }
+
+      #ContactBobinado {
+        position: absolute;
+        top: 1400px;
+        left: 185px;
+        height: 50px;
+        width: auto;
+        font-size: 120%;
+      }
+
+      #ContactWayChef {
+        position: absolute;
+        top: 1400px;
+        left: 605px;
+        height: 50px;
+        width: auto;
+        font-size: 120%;
+      }
+
+      #ContactTotem {
+        position: absolute;
+        top: 1400px;
+        left: 1065px;
+        height: 50px;
+        width: auto;
+        font-size: 120%;
+      }
+
+      #terceirotitulo {
+        position: absolute;
+        left: 160px;
+        top: 1750px;
+        font-family: "Bebas-Regular", sans-serif;
+        font-size: 400%;
+      }
+
+      #expander {
+        position: absolute;
+        top:2150px;
+      }
+    
+      .infos {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        top: 1200px;
+        left: 800px;
+      }
+     
+    </style>
+  </head>
+  <body>
+    <div id="blobs-wrapper">
+      <div class="blob" id="blob1"></div>
+      <div class="blob" id="blob2"></div>
+      <div class="blob" id="blob3"></div>
+      <div class="blob" id="blob4"></div>
+      <div class="blob" id="blob5"></div>
+      <div class="blob" id="blob6"></div>
+    </div>
+    <div class="section1">
+      <header id="cabeçalho">
+        <div class="header-left">
+          <img id="LogoHeader" src="logomegasistem.jpeg" />
+          <h1 id="h1-Header">Mega Sistem</h1>
+        </div>
+        <div class="header-right">
+          <button
+            class="headerbutton"
+            id="HomeHeader"
+            onclick="StraightToTop()"
+          >
+            HOME
+          </button>
+          <button
+            class="headerbutton"
+            id="ProductsHeader"
+            onclick="scrolltoproducts()"
+          >
+            PRODUTOS
+          </button>
+          <button
+            class="headerbutton"
+            id="ContactHeader"
+            onclick="window.open('https://wa.me/551732122300')"
+          >
+            CONTATO
+          </button>
+        </div>
+      </header>
+      <div id="conteudo">
+        <img id="WayChef" src="WayChef.png" />
+        <h1 id="primeirotitulo">Seu gerenciamento na palma da mão!</h1>
+        <p id="primeiroparagrafo">
+          Conheça o WayChef! Nosso sitema de vendas completo que pode ser
+          acessado<br />
+          diretamente pelo seu celular! Controle seu estoque, registre pedidos,
+          efetue <br />
+          pagamentos e recebimentos de forma simples!
+        </p>
+        <p id="segundoparagrafo">
+          Se interessou? Confira esse e mais produtos<br />
+          descendo a pagina ou clicando no botão ao lado:
+        </p>
+        <button id="ProductsButtonPage" onclick="scrolltoproducts()">PRODUTOS</button>
+      </div>
+    </div>
+    <section class="section2" id="ProductsPage">
+      <h1 id="segundotitulo">Nossos produtos!</h1>
+      <div class="productBox" id="produtoBobina">
+        <img id="bobinado" src="bobinado.png" />
+        <h1 class="NomeProdutos"id="BobinaTitulo">
+          Caixa de<br />
+          bobina
+        </h1>
+        <button class="ProdutcContact" id="ContactBobinado" onclick="window.open('https://wa.me/551732122300?text=Ol%C3%A1%20boa%20tarde!%20Tenho%20interesse%20na%20Caixa%20de%20bobina%20de%20voc%C3%AAs!', '_blank')">Tenho interesse!</button>
+        
+      </div>
+      <div class="productBox" id="produtoWayChef">
+        <img id="WayChefFrontal" src="WayChefFrontal.png" />
+        <h1 class="NomeProdutos" id="WayChefTitulo">
+          Sistema <br />WayChef
+        </h1>
+        <button class="ProdutcContact" id="ContactWayChef" onclick="window.open('https://wa.me/551732122300?text=Ol%C3%A1%20boa%20tarde!%20Tenho%20interesse%20na%20ferramenta%20do%20WayChef!', '_blank')">Tenho interesse!</button>
+      
+      </div>
+      <div class="productBox" id="produtoTerminal">
+        <img id="terminaldeauto" src="terminal.png" />
+        <h1 class="NomeProdutos"id="AutoatendimentoTitulo">
+          Totem para <br />
+          autoatendimento
+        </h1>
+        <button class="ProdutcContact" id="ContactTotem" onclick="window.open('https://wa.me/551732122300?text=Ol%C3%A1%20boa%20tarde!%20Tenho%20interesse%20no%20Terminal%20de%20autoatendimento%20de%20voc%C3%AAs!', '_blank')">Tenho interesse!</button>
+      
+      </div>
+    </section>
+    <section class="section3" id="ContatoPage">
+      <h1 id="terceirotitulo">Quer saber mais? <br> Entre em contato <br> conosco!</h1>
+      <conteinter id="infos"></div>
+        <h2 class="infos" id="endereço">📍Nosso endereço</h2>
+        <p class="infos">Rua Marechal Deodoro da Fonseca, 1735 <br>Parque Industrial - São Jose do Rio Preto, SP <br>CEP: 15025-070</p>
+        <h2 class="infos" id="telefones">📞Telefones de contato</h2>
+        <p class="infos">Fixo: (17) 3212-2300<br>WhatsApp: (17) 99623-7020<br>Celular: (17) 99791-0201</p>
+        <h2 class="infos" id="email">✉️Nosso E-mail</h2>
+        <p class="infos">marcos@megasisteminformatica.com.br</p>
+        <h3 class="infos" id="horariodeatendimento">⏰horario de atendimento</h3>
+        <p class="infos">Segunda à Sexta: 8h às 18h</p>
+        <div id="pagesizeexpander">
+          <p id="expander">.</p>
+       </div>
+      </conteinter>
+    </section>
+  </body>
+</html>
+<script>
+  function StraightToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // rolagem suave
+    });
+  }
+
+  function scrolltoproducts() {
+    const section = document.getElementsByClassName("section2")[0];
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+</script>
