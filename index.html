@@ -3,12 +3,15 @@
   <head>
     <title>Mega Sistem</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="icon" type="image/jpeg" sizes="32x32" href="logomegasistem.jpeg">
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="https://mega-sistem-desktops.vercel.app/logomegasistem.jpeg">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <style>
       @font-face {
         font-family: "Bebas-Regular";
@@ -40,7 +43,7 @@
         position: absolute;
         border-radius: 50%;
         background-color: #cc701a;
-        filter: blur(60px);
+        filter: blur(35px);
         opacity: 0.3;
       }
 
@@ -181,8 +184,8 @@
         width: auto;
         left: 600px;
         top: 150px;
-        font-family: "Bebas-Regular", sans-serif;
-        font-size: 45px;
+        font-family: "Bebas Neue", sans-serif;
+        font-size: 55px;
         max-lines: 2;
       }
 
@@ -227,7 +230,7 @@
         position: absolute;
         left: 550px;
         top: 750px;
-        font-family: "Bebas-Regular", sans-serif;
+        font-family: "Bebas Neue", sans-serif;
         font-size: 300%;
       }
 
@@ -315,27 +318,39 @@
       }
 
       #terceirotitulo {
+        position: relative;
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      #quartotitulo {
         position: absolute;
-        left: 160px;
-        top: 1750px;
-        font-family: "Bebas-Regular", sans-serif;
+        left: 260px;
+        top: 175px;
+        font-family: "Bebas Neue", sans-serif;
         font-size: 400%;
       }
 
-      #expander {
-        position: absolute;
-        top:2150px;
-      }
+
     
       .infos {
         position: relative;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        top: 1200px;
-        left: 800px;
+        background-color: rgb(0, 0, 29);
+        top: 150px;
       }
-     
+      
+      .section4 {
+        position: absolute;
+        background-color: rgb(0, 0, 29);
+        top: 2400px;
+        left: -100px;
+        padding-left: 1000px;
+        padding-right: 2000px;
+        padding-bottom: 180px;
+      }
     </style>
   </head>
   <body>
@@ -350,7 +365,7 @@
     <div class="section1">
       <header id="cabeçalho">
         <div class="header-left">
-          <img id="LogoHeader" src="logomegasistem.jpeg" />
+          <img id="LogoHeader" src="https://mega-sistem-desktops.vercel.app/logomegasistem.jpeg" />
           <h1 id="h1-Header">Mega Sistem</h1>
         </div>
         <div class="header-right">
@@ -378,7 +393,7 @@
         </div>
       </header>
       <div id="conteudo">
-        <img id="WayChef" src="WayChef.png" />
+        <img id="WayChef" src="https://mega-sistem-desktops.vercel.app/WayChef.png" />
         <h1 id="primeirotitulo">Seu gerenciamento na palma da mão!</h1>
         <p id="primeiroparagrafo">
           Conheça o WayChef! Nosso sitema de vendas completo que pode ser
@@ -397,7 +412,7 @@
     <section class="section2" id="ProductsPage">
       <h1 id="segundotitulo">Nossos produtos!</h1>
       <div class="productBox" id="produtoBobina">
-        <img id="bobinado" src="bobinado.png" />
+        <img id="bobinado" src="https://mega-sistem-desktops.vercel.app/bobinado.png" />
         <h1 class="NomeProdutos"id="BobinaTitulo">
           Caixa de<br />
           bobina
@@ -406,7 +421,7 @@
         
       </div>
       <div class="productBox" id="produtoWayChef">
-        <img id="WayChefFrontal" src="WayChefFrontal.png" />
+        <img id="WayChefFrontal" src="https://mega-sistem-desktops.vercel.app/WayChefFrontal.png" />
         <h1 class="NomeProdutos" id="WayChefTitulo">
           Sistema <br />WayChef
         </h1>
@@ -414,7 +429,7 @@
       
       </div>
       <div class="productBox" id="produtoTerminal">
-        <img id="terminaldeauto" src="terminal.png" />
+        <img id="terminaldeauto" src="https://mega-sistem-desktops.vercel.app/terminal.png" />
         <h1 class="NomeProdutos"id="AutoatendimentoTitulo">
           Totem para <br />
           autoatendimento
@@ -423,8 +438,11 @@
       
       </div>
     </section>
-    <section class="section3" id="ContatoPage">
-      <h1 id="terceirotitulo">Quer saber mais? <br> Entre em contato <br> conosco!</h1>
+    <section class="section3" id="ClientesPage">
+      <h1 id="terceirotitulo">ALGUNS DE NOSSOS CLIENTES!</h1>
+    </section>
+    <section class="section4" id="ContatoPage">
+      <h1 id="quartotitulo">Quer saber mais? <br> Entre em contato <br> conosco!</h1>
       <conteinter id="infos"></div>
         <h2 class="infos" id="endereço">📍Nosso endereço</h2>
         <p class="infos">Rua Marechal Deodoro da Fonseca, 1735 <br>Parque Industrial - São Jose do Rio Preto, SP <br>CEP: 15025-070</p>
@@ -434,9 +452,6 @@
         <p class="infos">marcos@megasisteminformatica.com.br</p>
         <h3 class="infos" id="horariodeatendimento">⏰horario de atendimento</h3>
         <p class="infos">Segunda à Sexta: 8h às 18h</p>
-        <div id="pagesizeexpander">
-          <p id="expander">.</p>
-       </div>
       </conteinter>
     </section>
   </body>
