@@ -12,6 +12,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
     <style>
       @font-face {
         font-family: "Bebas-Regular";
@@ -32,8 +36,8 @@
         position: fixed;
         top: 0;
         left: 0;
-        width: 200vw;
-        height: 250vh;
+        width: 100vw;
+        height: 150vh;
         z-index: 0;
         pointer-events: none;
         overflow: hidden;
@@ -45,6 +49,13 @@
         background-color: #eb7304;
         filter: blur(35px);
         opacity: 0.3;
+      }
+
+      #blob0 {
+        width: 200px;
+        height: 200px;
+        left: 10%;
+        animation: floatDown 30s linear infinite;
       }
 
       #blob1 {
@@ -229,10 +240,10 @@
       #segundotitulo {
         position: absolute;
         color: rgb(0, 0, 29);
-        left: 540px;
-        top: 45px;
+        left: 505px;
+        top: 15px;
         font-family: "Bebas Neue", sans-serif;
-        font-size: 300%;
+        font-size: 355%;
       }
 
       #bobinado {
@@ -244,21 +255,21 @@
       #WayChefFrontal {
         position: absolute;
         top: 220px;
-        left: 580px;
+        left: 585px;
       }
 
       #terminaldeauto {
         position: absolute;
         height: 65%;
         width: auto;
-        top: 140px;
+        top: 120px;
         left: 850px;
       }
 
       #BobinaTitulo {
         position: absolute;
         color: rgb(0, 0, 29);
-        top: 1250px;
+        top: 145px;
         left:200px;
         text-align: center;
        }
@@ -266,24 +277,24 @@
       #WayChefTitulo {
         position: absolute;
         color: rgb(0, 0, 29);
-        top: 1250px;
-        left: 615px;
+        top: 115px;
+        left: 596px;
         text-align: center;
        }
 
       #AutoatendimentoTitulo {
         position: absolute;
         color: rgb(0, 0, 29);
-        top: 1250px;
-        left: 1000px;
+        top: 145px;
+        left: 950px;
         text-align: center;
       }
 
       .ProdutcContact {
-        background-color: rgba(255, 255, 255, 0.271);
-        border: 2px solid white;
+        background-color: rgba(175, 175, 175, 0.137);
+        border: 2px solid rgb(0, 0, 0);
         border-radius: 32px;
-        color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
         padding: 8px 12px;
         cursor: pointer;
         transition: 0.3s;
@@ -307,8 +318,8 @@
       #ContactWayChef {
         position: absolute;
         color: rgb(0, 0, 29);
-        top: 1400px;
-        left: 605px;
+        top: 600px;
+        left: 590px;
         height: 50px;
         width: auto;
         font-size: 120%;
@@ -317,8 +328,8 @@
       #ContactTotem {
         position: absolute;
         color: rgb(0, 0, 29);
-        top: 1400px;
-        left: 1065px;
+        top: 600px;
+        left: 1020px;
         height: 50px;
         width: auto;
         font-size: 120%;
@@ -371,7 +382,7 @@
       
       .section2 {
         position: absolute;
-        background-color: aliceblue;
+        background-color: azure;
         color: rgb(0, 0, 29);
         top: 750px;
         padding-left: 1000px;
@@ -392,6 +403,7 @@
   </head>
   <body>
     <div id="blobs-wrapper">
+      <div class="blob" id="blob0"></div>
       <div class="blob" id="blob1"></div>
       <div class="blob" id="blob2"></div>
       <div class="blob" id="blob3"></div>
@@ -500,7 +512,7 @@
   function StraightToTop() {
     window.scrollTo({
       top: 0,
-      behavior: "smooth", // rolagem suave
+      behavior: "smooth", 
     });
   }
 
