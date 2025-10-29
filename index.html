@@ -24,7 +24,7 @@
         font-style: normal;
       }
 
-      body {
+       body {
         background: #010ca8;
         margin: 0;
         font-family: "Montserrat", sans-serif;
@@ -46,58 +46,80 @@
       .blob {
         position: absolute;
         border-radius: 50%;
-        background-color: #eb7304;
+        background-color: #ff7b00;
         filter: blur(35px);
-        opacity: 0.3;
+        opacity: 0.7;
       }
 
       #blob0 {
         width: 200px;
         height: 200px;
-        left: 10%;
-        animation: floatDown 30s linear infinite;
+        left: 3%;
+        animation: floatUp2 30s linear infinite;
+        top: 10px;
       }
 
       #blob1 {
         width: 200px;
         height: 200px;
         left: 10%;
-        animation: floatUp 19s linear infinite;
+        animation: floatUp1 19s linear infinite;
+        top:-20px;
       }
       #blob2 {
         width: 180px;
         height: 180px;
         left: 35%;
-        animation: floatDown 30s linear infinite;
+        animation: floatUp2 10s linear infinite;
+        top: -100px;
       }
       #blob3 {
         width: 220px;
         height: 220px;
         left: 70%;
-        animation: floatUp 20s linear infinite;
+        animation: floatUp2 20s linear infinite;
+        top: -234px;
       }
       #blob4 {
         width: 160px;
         height: 160px;
-        left: 20%;
-        animation: floatDown 29s linear infinite;
+        left: -10%;
+        animation: floatUp1 30s linear infinite;
+        top: 5px;
       }
       #blob5 {
         width: 180px;
         height: 180px;
         left: 50%;
-        animation: floatUp 17s linear infinite;
+        animation: floatUp2 17s linear infinite;
+        top: 10px;
       }
       #blob6 {
         width: 200px;
         height: 200px;
         left: 80%;
-        animation: floatDown 22s linear infinite;
+        animation: floatUp1 22s linear infinite;
+        top:-500px;
       }
 
-      @keyframes floatUp {
+      @keyframes floatUp1 {
         0% {
-          top: 100vh;
+          top: 180vh;
+          opacity: 0;
+        }
+        10%,
+         90% {
+         opacity: 0.4;
+        }
+        100% {
+          top: -250px;
+          opacity: 0;
+        }
+      }
+
+       @keyframes floatUp2 {
+        0% {
+          top: 130vh;
           opacity: 0;
         }
         10%,
